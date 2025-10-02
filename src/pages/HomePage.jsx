@@ -5,7 +5,6 @@ function HomePage() {
   const [data, setData] = useState({ x: [], y: [] });
 
   useEffect(() => {
-    // Example: f(x) = x^2 - 4x + 3
     const xVals = [];
     const yVals = [];
     for (let x = -5; x <= 5; x += 0.5) {

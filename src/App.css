@@ -1,4 +1,3 @@
-/* Reset for clean layout */
 body, html, #root, .App {
   margin: 0;
   padding: 0;
@@ -7,14 +6,13 @@ body, html, #root, .App {
   background-color: #f4f6f9;
 }
 
-/* ✅ Full-width blue header */
 .navbar {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 24px 48px;
-  background: #0056d2;   /* full blue header */
+  background: #0056d2;  
   color: white;
   box-sizing: border-box;
 }
@@ -36,7 +34,6 @@ body, html, #root, .App {
   color: #ffdd57;
 }
 
-/* ✅ Main page container */
 .page-content {
   padding: 24px;
   text-align: center;

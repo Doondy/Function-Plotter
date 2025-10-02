@@ -8,7 +8,6 @@ function App() {
   return (
     <Router>
       <div className="App">
-        {/* ✅ Full-width Blue Header */}
         <nav className="navbar">
           <h2>📊 Graphing App</h2>
           <div className="nav-links">
@@ -17,7 +16,7 @@ function App() {
           </div>
         </nav>
 
-        {/* ✅ Page Content */}
+       
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
