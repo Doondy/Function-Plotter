@@ -1,0 +1,43 @@
+/* Reset for clean layout */
+body, html, #root, .App {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+}
+
+/* ✅ Full-width blue header */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 48px;
+  background: #0056d2;   /* full blue header */
+  color: white;
+  box-sizing: border-box;
+}
+
+.navbar h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: #ffdd57;
+}
+
+/* ✅ Main page container */
+.page-content {
+  padding: 24px;
+  text-align: center;
+}
