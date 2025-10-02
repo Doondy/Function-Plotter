@@ -22,7 +22,7 @@ ChartJS.register(
   Legend
 );
 
-const Home = () => {
+const HomePage = () => {
   const [expression, setExpression] = useState("");
   const [plotData, setPlotData] = useState(null);
 
@@ -33,7 +33,7 @@ const Home = () => {
       const res = await axios.post("http://localhost:5000/api/plot", {
         expression,
       });
-      setPlotData(res.data);
+      setPlotData(res.data); // ✅ result already saved to DB
     } catch (err) {
       console.error(err);
       alert("Error plotting function");
@@ -61,9 +61,9 @@ const Home = () => {
         </button>
       </div>
 
-      {/* Chart with reduced size */}
+      {/* Chart */}
       {plotData && (
-        <div className="max-w-xl mx-auto"> {/* ✅ Restrict container width */}
+        <div className="max-w-xl mx-auto mb-8">
           <Line
             data={{
               labels: plotData.x,
@@ -77,12 +77,9 @@ const Home = () => {
                 },
               ],
             }}
-            options={{
-              responsive: true,
-              maintainAspectRatio: false, // ✅ Needed for custom height
-            }}
-            height={300}  // ✅ smaller height
-            width={500}   // ✅ smaller width
+            options={{ responsive: true, maintainAspectRatio: false }}
+            height={300}
+            width={500}
           />
         </div>
       )}
@@ -90,4 +87,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;
