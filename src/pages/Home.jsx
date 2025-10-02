@@ -7,17 +7,20 @@ function HomePage() {
   useEffect(() => {
     const xVals = [];
     const yVals = [];
+
+    // Example function: f(x) = x^2 - 4x + 3
     for (let x = -5; x <= 5; x += 0.5) {
       xVals.push(x);
       yVals.push(x * x + 6 * x + 9);
     }
+
     setData({ x: xVals, y: yVals });
   }, []);
 
   return (
-    <div className="page-content">
+    <div className="page-content" style={{ textAlign: "center", padding: "20px" }}>
       <h1 style={{ color: "#0056d2" }}>📈 Function Plotter</h1>
-      <p>This is the graph of <b>f(x) = x² + 6x + 9</b></p>
+      <p>Graph of <b>f(x) = x² + 6x + 9</b></p>
 
       <Plot
         data={[
@@ -35,12 +38,10 @@ function HomePage() {
           title: "Graph of f(x) = x² + 6x + 9",
           xaxis: { title: "x" },
           yaxis: { title: "f(x)" },
-          plot_bgcolor: "#f8f9fa",
-          paper_bgcolor: "#ffffff",
         }}
       />
     </div>
   );
 }
 
-export default HomePage;
+export default HomePage;     
