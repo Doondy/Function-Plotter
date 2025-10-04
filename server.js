@@ -1,4 +1,3 @@
-// server.js
 import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
@@ -12,7 +11,6 @@ const PORT = 5000;
 app.use(cors());
 app.use(bodyParser.json());
 
-// ✅ Example: API to process functions (dummy response)
 app.post("/api/plot", (req, res) => {
   const { expression } = req.body;
 
@@ -32,7 +30,6 @@ app.post("/api/plot", (req, res) => {
   });
 });
 
-// ✅ Example: Save graph history in-memory (for now)
 let graphHistory = [];
 
 app.post("/api/history", (req, res) => {
